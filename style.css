@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rouge Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: rgb(11, 14, 44);
+}
+
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: rgb(11, 14, 44);
+}
+
+h4{
+    font-size: 20px;
+    color: rgb(11, 14, 44);
+}
+
+h6{
+    font-weight: 700;
+    font-size: 12px;
+    color: rgb(11, 14, 44);
+}
+
+p{
+    font-size: 16px;
+    color: rgb(11, 14, 44);
+    margin: 15px 0 20px 0;
+}
+
+.section-p1{
+    padding: 40px 80px;
+
+}
+
+.section-m1{
+    margin: 40px 0;
+
+}
+
+body{
+    width: 100%;
+}
+
+
+/* Header page */
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 60px;
+    background-color: rgb(248, 246, 254);
+    box-shadow: 0 5px 15px rgb(0, 0, 0, 0.06);
+    height: 80px;
+}
+
+.logo{
+    height: 150px;
+    width: auto;
+    object-fit: contain;
+}
+#nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nav-bar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+
+}
+
+#nav-bar li  a{
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 400;
+    color: rgb(34, 7, 59);
+    transition: 0.3s ease;
+}
+
+#nav-bar li a:hover,
+#nav-bar li a.active{
+    color: rgb(192, 111, 206);
+
+}
+#nav-bar li a.active::after,
+#nav-bar li a:hover::after{
+    content: "";
+    width: 40%;
+    height: 2px;
+    background: rgb(192, 111, 206);
+    position: absolute;
+    bottom: -5px;
+    left: 20px;
+    transition: 0.5s ease;
+
+}
+/* hero section */
+#hero{
+    background-image: url(images/hero.png);
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% rig 0%;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+#hero h4{
+    /* color: rgb(252, 248, 251);
+    padding-bottom: 15px;
+    font-weight: 600;
+    font-size: 20px; */
+
+    color: #fce4ec; /* Light pink */
+    padding-bottom: 12px;
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+#hero h1{
+    color: aliceblue;
+    font-size: 100px;
+
+    color: #fff;
+    font-size: 80px;
+    line-height: 1.1;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin-bottom: 10px;
+    
+    
+}
+#hero h2{
+    /* color: rgb(87, 25, 68);
+    font-weight: 500;
+    padding-bottom: 20px; */
+
+    color: #5e1543; /* Rich plum */
+    font-weight: 600;
+    font-size: 40px;
+    padding: 10px 0;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+.highlighted-text {
+    /* background-color: rgb(244, 223, 242);
+    padding: 5px 15px;
+    display: inline-block; */
+    
+    background-color: rgba(255, 255, 255, 0.85); /* soft white with opacity */
+    padding: 8px 20px;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    font-style: italic;
+
+}
+
+#hero p{
+    
+    color: #f3f3f3;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.hero-btn {
+    background-color: #f6e6f9; /* Soft lavender pink */
+    color: #5e1543; /* Rich plum text */
+    font-size: 18px;
+    font-family: "Rouge Script", cursive;
+    font-weight: 500;
+
+    padding: 12px 28px;
+    border: 2px solid #d6a3e5;
+    border-radius: 50px;
+    cursor: pointer;
+
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-btn::before {
+    content: "";
+    position: absolute;
+    background: #e9c8f1;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    transition: 0.4s ease;
+}
+
+.hero-btn:hover::before {
+    width: 100%;
+}
+
+.hero-btn span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Animation for hero text elements */
+#hero h4,
+#hero h2,
+#hero h1,
+#hero p,
+.hero-btn {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Scale up on hover */
+#hero h4:hover,
+#hero h2:hover,
+#hero h1:hover,
+#hero p:hover,
+.hero-btn:hover {
+    transform: scale(1.05);
+}
+
+
+#hero h2:hover,
+#hero h1:hover {
+    color: #f4a4ec; /* Subtle fashion-friendly glow */
+}
+
