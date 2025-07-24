@@ -5,7 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Rouge Script", cursive;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
 }
 
@@ -54,7 +54,7 @@ body{
 
 
 /* Header page */
-#header{
+/* #header{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -62,12 +62,38 @@ body{
     background-color: rgb(248, 246, 254);
     box-shadow: 0 5px 15px rgb(0, 0, 0, 0.06);
     height: 80px;
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+    
+} */
+ #header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 60px;
+
+    /* REMOVE or comment out these lines: */
+    /* background-color: rgb(248, 246, 254); */
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06); */
+
+    background: transparent; /* make it transparent */
+    box-shadow: none;        /* remove the shadow */
+    height: 80px;
+    z-index: 1000;
+    position: absolute;  /* instead of sticky */
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
+
 .logo{
-    height: 150px;
-    width: auto;
-    object-fit: contain;
+    margin-top: 80px;
+    height: 200px;
+    
+    
 }
 #nav-bar{
     display: flex;
@@ -84,9 +110,10 @@ body{
 
 #nav-bar li  a{
     text-decoration: none;
-    font-size: 25px;
+    font-size: 35px;
     font-weight: 400;
-    color: rgb(34, 7, 59);
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,5);
     transition: 0.3s ease;
 }
 
@@ -108,7 +135,7 @@ body{
 
 }
 /* hero section */
-#hero{
+/* #hero{
     background-image: url(images/hero.png);
     height: 90vh;
     width: 100%;
@@ -121,6 +148,25 @@ body{
     justify-content: center;
     text-align: center;
     
+} */
+
+#hero {
+    width: 100%;
+    height: 100vh; /* makes it cover full viewport height */
+
+    background-image: url("images/hero.png"); /* put your correct image path */
+    background-size: cover;      /* scales image to cover whole section */
+    background-position: center; /* centers the image */
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 60px;
+    color: white; /* makes text visible over background */
+    position: relative;
 }
 
 #hero h4{
@@ -129,54 +175,70 @@ body{
     font-weight: 600;
     font-size: 20px; */
 
-    color: #fce4ec; /* Light pink */
+    color: #ffffff; /* Light pink */
     padding-bottom: 12px;
     font-weight: 500;
-    font-size: 22px;
+    font-size: 30px;
     letter-spacing: 1px;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
-#hero h1{
-    color: aliceblue;
-    font-size: 100px;
 
-    color: #fff;
-    font-size: 80px;
+
+#hero h1{
+    /* color: aliceblue;
+    font-size: 110px;
+
+    
     line-height: 1.1;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     margin-bottom: 10px;
-    
-    
-}
-#hero h2{
-    /* color: rgb(87, 25, 68);
-    font-weight: 500;
-    padding-bottom: 20px; */
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease; */
 
-    color: #5e1543; /* Rich plum */
-    font-weight: 600;
-    font-size: 40px;
-    padding: 10px 0;
-    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
-}
-.highlighted-text {
-    /* background-color: rgb(244, 223, 242);
-    padding: 5px 15px;
-    display: inline-block; */
-    
-    background-color: rgba(255, 255, 255, 0.85); /* soft white with opacity */
-    padding: 8px 20px;
-    border-radius: 10px;
+    position: relative;
     display: inline-block;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    font-style: italic;
+    font-size: 110px;
+    color: aliceblue;
+    padding: 20px 40px;
+    text-align: center;
+    z-index: 1;
+    
+    overflow: hidden;
+    
+}
 
+#hero h1::before{
+    /* content: "";
+    position: absolute;
+    background: #e0b4eb;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.4s ease; */
+    content: "";
+    position: absolute;
+    background: rgba(255, 192, 203,0.2); /* transparent soft pink */
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.4s ease;
+
+}
+
+#hero h1:hover::before{
+    width: 100%;
+    
 }
 
 #hero p{
     
     color: #f3f3f3;
-    font-size: 18px;
+    font-size: 25px;
     font-weight: 400;
     font-style: italic;
     letter-spacing: 0.5px;
@@ -205,9 +267,9 @@ body{
 .hero-btn::before {
     content: "";
     position: absolute;
-    background: #e9c8f1;
+    background: #e0b4eb;
     height: 100%;
-    width: 0;
+    width:  0;
     top: 0;
     left: 0;
     z-index: 0;
@@ -216,6 +278,7 @@ body{
 
 .hero-btn:hover::before {
     width: 100%;
+    cursor: pointer;
 }
 
 .hero-btn span {
@@ -244,6 +307,116 @@ body{
 
 #hero h2:hover,
 #hero h1:hover {
-    color: #f4a4ec; /* Subtle fashion-friendly glow */
+    color: #eeeeee; /* Subtle fashion-friendly glow */
 }
+
+
+
+/* feature stying */
+
+#feature{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#feature .fe-box img{
+    width: 100%;
+    height: auto;
+    
+    margin-bottom: 10px;
+
+}
+
+
+#feature .fe-box{
+    width: 140px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgb(0, 0, 0,0.05);
+    border: 1px solid rgb(199, 192, 204);
+    border-radius: 5%;
+    margin: 15px 0;
+    z-index: 1;
+}
+
+#feature  #f1 h6{
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    font-size: 20px;
+    color: #7a4786;
+    background-color: #c6accd;
+
+}
+#feature  #f2 h6{
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    font-size: 20px;
+    color: #457b60;
+    background-color: #bcdfd0;
+
+}
+
+#feature  #f3 h6{
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    font-size: 20px;
+    color: #2e5c80;
+    background-color: #a3b6dc;
+
+}
+
+#feature  #f4 h6{
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    font-size: 20px;
+    color: #7a4786;
+    background-color: #c6accd;
+
+}
+
+#feature  #f5 h6{
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    font-size: 20px;
+    color: #2e5c80;
+    background-color: #a3b6dc;
+}
+#feature  #f6 h6{
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    font-size: 20px;
+    color: #457b60;
+    background-color: #bcdfd0;
+
+}
+
+#feature  #f7 h6{
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    font-size: 20px;
+    color: #7a4786;
+    background-color: #c6accd;
+
+}
+#feature .fe-box:hover{
+    box-shadow: 10px 10px 54px rgba(157, 152, 152, 0.5);
+
+}
+
 
