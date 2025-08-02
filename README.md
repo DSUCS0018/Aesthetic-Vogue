@@ -56,5 +56,5 @@ https://github.com/your-username/aesthetic-vogue/assets/main/project-demo.mp4
 
 ---
 
-## 📁 Folder Structure
+
 
