@@ -14,3 +14,12 @@ if(close){
     });
 
 }
+
+const mainImg = document.getElementById("main-img");
+const smallImgs = document.querySelectorAll(".small-img");
+
+  smallImgs.forEach(img => {
+    img.addEventListener("click", () => {
+      mainImg.src = img.src;
+    });
+  });
