@@ -15,7 +15,7 @@
 ## 🖼️ Website Screenshots
 
 ### 🏠 Homepage
-![Homepage](images/ss/1.png)
+(images/ss/1.png)
 
 ### 👗 Featured Products
 ![Products](images/ss/2.png)
