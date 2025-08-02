@@ -11,11 +11,10 @@
 ---
 
 
-
 ## 🖼️ Website Screenshots
 
 ### 🏠 Homepage
-(images/ss/1.png)
+![Homepage](images/ss/1.png)
 
 ### 👗 Featured Products
 ![Products](images/ss/2.png)
@@ -34,4 +33,22 @@
 ## 🛠 Tech Stack
 
 - **HTML5** – Structure & semantic layout
-- **CSS3**
+- **CSS3** – Styling with Flexbox, Grid & media queries
+- **JavaScript (Vanilla)** – Navbar toggle & product image preview
+- **Netlify** – Deployment & hosting
+
+---
+
+## ✨ Features
+
+- ✅ Clean, elegant homepage layout
+- ✅ Interactive product gallery (click to change image)
+- ✅ Mobile-friendly navigation bar with hamburger toggle
+- ✅ Separate Shop page with featured items and pricing
+- ✅ Smooth hover effects and transitions
+- ✅ Responsive design across devices
+
+---
+
+## 📁 Folder Structure
+
